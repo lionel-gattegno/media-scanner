@@ -145,7 +145,7 @@ module.exports = function ({ config, db, logger }) {
       config.paths.ffmpeg,
       '-hide_banner',
       '-i', `"${doc.mediaPath}"`,
-      '-vf select=gt(scene\,0.4)',
+      '-vf \'select=gt(scene\,0.4)\'',
       `-vf scale=${config.thumbnails.width}:${config.thumbnails.height}`,
       '-frames:v 1',
       '-threads 1',
